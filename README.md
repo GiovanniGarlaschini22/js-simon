@@ -1,7 +1,5 @@
 # Simon Says
 
-Questo progetto simula un gioco in cui l'utente deve ricordare una serie di numeri mostrati per 30 secondi, inserirli successivamente e scoprire quanti numeri ha indovinato.
-
 ## Consegna
 Visualizzare in pagina 5 numeri casuali. Da lì parte un timer di 30 secondi.
 Dopo 30 secondi i numeri scompaiono e appaiono invece 5 input in cui l'utente deve inserire i numeri che ha visto precedentemente, nell'ordine che preferisce.
@@ -92,3 +90,7 @@ Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei num
 ## Note
 - Il formato dell'ID utente è fisso: `ID0000`.
 - L'ordine dei numeri inseriti dall'utente non influisce sul risultato.
+
+## Bonus
+- Inseriamo la validazione: se l'utente inserisce cose diverse da numeri lo blocchiamo in qualche modo.
+- Se l’utente ha inserito qualcosa di non valido, segnaliamolo visivamente nel form.
