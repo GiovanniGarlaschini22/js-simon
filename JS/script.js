@@ -1,7 +1,9 @@
 const numeriContainer = document.getElementById("numeri-container");
 const timerElem = document.getElementById("timer");
 const inputContainer = document.getElementById("input-container");
-const risultato = document.getElementById("risultato");
+const risultatoTutti = document.getElementById("risultato-tutti");
+const risultatoAlcuni = document.getElementById("risultato-alcuni");
+const risultatoNessuno = document.getElementById("risultato-nessuno");
 const confermaBtn = document.getElementById("conferma");
 const userIdField = document.getElementById("user-id");
 const alertContainer = document.getElementById("alert-container");
@@ -46,7 +48,7 @@ const mostraAlert = (messaggio) => {
     alertContainer.style.display = "block";
     setTimeout(() => {
         alertContainer.style.display = "none";
-    }, 3000); // Nasconde l'alert dopo 3 secondi
+    }, 3000);
 };
 
 /* Pulsante conferma */
@@ -82,10 +84,10 @@ confermaBtn.addEventListener("click", () => {
     }
     /* stampare esiti */
     if (numeriIndovinati.length === numeriCasuali.length) {
-        risultato.innerHTML = `Complimenti! Hai indovinato tutti i numeri! (${numeriIndovinati.join(", ")})`;
+        risultatoTutti.innerHTML = `Complimenti! Hai indovinato tutti i numeri! (${numeriIndovinati.join(", ")})`;
     } else if (numeriIndovinati.length > 0) {
-        risultato.innerHTML = `Complimenti! Hai indovinato i seguenti numeri: ${numeriIndovinati.join(", ")}`;
+        risultatoAlcuni.innerHTML = `Complimenti! Hai indovinato i seguenti numeri: ${numeriIndovinati.join(", ")}`;
     } else {
-        risultato.innerHTML = "Spiacenti! Non hai indovinato nessun numero :(";
+        risultatoNessuno.innerHTML = "Spiacenti! Non hai indovinato nessun numero :(";
     }
 });
